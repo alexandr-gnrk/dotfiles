@@ -1,0 +1,2 @@
+ # Remap caps lock to escape
+ setxkbmap -option caps:escape
