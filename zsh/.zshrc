@@ -2,6 +2,9 @@
 alias vi="nvim"
 # Set default editor
 export EDITOR="$(which nvim)"
+
+# conda fix
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 # ===========================
 
 
@@ -111,3 +114,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+source /etc/profile.d/google-cloud-cli.sh
