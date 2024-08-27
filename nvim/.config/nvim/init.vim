@@ -5,6 +5,12 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+
+call plug#end()
+
 set paste               " Paste from a windows or from vim
 " set go+=a               " Visual selection automatically copied to the clipboard
 set scrolloff=5
