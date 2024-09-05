@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# This script fixes sound after system sleep
+# To make it work automatically place the file at `/lib/systemd/system-sleep/99_restart_sound`
+# And make it executable `sudo chmod +x /lib/systemd/system-sleep/99_restart_sound`
+  
+case "$1" in
+    post)
+        for DEVICE_ID in `lspci -D |grep Audio|awk '{print $1}'`
+        do
+        echo 1 > /sys/bus/pci/devices/${DEVICE_ID}/remove
+        done
+        sleep 1
+        echo 1 > /sys/bus/pci/rescan
+esac
