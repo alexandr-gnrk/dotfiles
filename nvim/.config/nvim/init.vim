@@ -33,8 +33,13 @@ filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
-set cursorline              " highlight current cursorline
+" set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+
+let mapleader = " "
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>q :wq!<CR>
+nnoremap <leader>x :x!<CR>
