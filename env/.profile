@@ -29,3 +29,9 @@ fi
 # set default editor
 export EDITOR=nvim
 export VISUAL=nvim
+
+alias vi="nvim"
+alias v="nvim"
+alias open="xdg-open"
+# https://github.com/hhatto/gocloc
+alias loc="docker run --rm -v "${PWD}":/workdir hhatto/gocloc ."
